@@ -32,7 +32,10 @@ login(){
  
 }
 
+registro(){
 
+  this.router.navigate(['register']);
+}
 
 
 }
