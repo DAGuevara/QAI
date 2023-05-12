@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChatBotService } from '../services/chat-bot.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -10,7 +11,7 @@ export class ChatComponent {
 
   message!: string; 
 
-  constructor(private chatgptSvc:ChatBotService){}
+  constructor(private chatgptSvc:ChatBotService,private router: Router){}
 
   SendMessage(){
     this.chatgptSvc.getDataFromOpenAI(this.message);
@@ -22,6 +23,11 @@ export class ChatComponent {
 DeleteMessage(){
 
   location.reload();
+}
+
+About(){
+  this.router.navigate(['about']);
+  
 }
 
 }

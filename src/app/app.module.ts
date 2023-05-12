@@ -8,7 +8,8 @@ import { ChatComponent } from './chat/chat.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -16,13 +17,17 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     ChatComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     FormsModule,
     ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
